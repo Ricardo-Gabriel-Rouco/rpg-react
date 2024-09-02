@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+/**
+* global content styling
+*/
+
+/* game div with background image*/
+.rpgui-content {
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  position: fixed;
+  overflow: hidden;
+  font-size: 0.8em;
+}
+
+/* general rules to apply on anything inside the content */
+.rpgui-content * {
+  /* remove outline effect for input elements etc */
+  outline: none;
+
+  /* prevent dragging */
+  cursor: default; /* Set the cursor to a default style */
+  -webkit-touch-callout: none; /* Prevent touch callouts on iOS */
+  -webkit-user-select: none; /* Prevent user selection on WebKit browsers */
+  -khtml-user-select: none; /* Prevent user selection on Konqueror */
+  -moz-user-select: none; /* Prevent user selection on Firefox */
+  -ms-user-select: none; /* Prevent user selection on Internet Explorer */
+  user-select: none; /* Prevent user selection on modern browsers */
+  -webkit-user-drag: none;
+
+  /* prevent text selecting */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  /* pixelated enlargement filter (to keep the pixel-art style when enlarging pictures) */
+  -ms-interpolation-mode: nearest-neighbor;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: -webkit-crisp-edges;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -o-crisp-edges;
+  image-rendering: pixelated;
+
+  /* default font */
+  font-family: "Press Start 2P", cursive;
+}
+
+/**
+* different cursor graphics
+*/
+
+
+
+/* default cursor important */
+/* this rule is for when you specifically request this cursor class */
+.rpgui-cursor-default
+{
+    cursor: url("public/cursor/default.png"), auto !important;
+}
+
+/* default cursor, not important, for all elements without any other rule. */
+.rpgui-content,
+label
+{
+    cursor: url("public/cursor/default.png"), auto;
+}
+
+
+
+
+/* pointer / hand cursor important */
+/* this rule is for when you specifically request this cursor class */
+.rpgui-cursor-point,
+.rpgui-cursor-point *
+{
+    cursor: url("public/cursor/point.png") 10 0, auto !important;
+}
+
+/* pointer / hand cursor, not important, for all elements that have pointer by-default */
+.rpgui-content a,
+.rpgui-content button,
+.rpgui-button,
+.rpgui-slider-container,
+.rpgui-content input[type=radio].rpgui-radio + label,
+.rpgui-list-imp,
+.rpgui-dropdown-imp,
+.rpgui-content input[type=checkbox].rpgui-checkbox + label
+{
+    cursor: url("public/cursor/point.png") 10 0, auto;
+}
+
+
+
+
+/* for input / text selection important */
+/* this rule is for when you specifically request this cursor class */
+.rpgui-cursor-select,
+.rpgui-cursor-select *
+{
+    cursor: url("public/cursor/select.png") 10 0, auto !important;
+}
+
+/* for input / text selection, not important, for all elements that have pointer by-default */
+.rpgui-cursor-select,
+.rpgui-content input,
+.rpgui-content textarea
+{
+    cursor: url("public/cursor/select.png") 10 0, auto;
+}
+
+/* for grabbing stuff */
+/* this rule is for when you specifically request this cursor class */
+.rpgui-cursor-grab-open,
+.rpgui-cursor-grab-open *
+{
+    cursor: url("public/cursor/grab-open.png") 10 0, auto !important;
+}
+
+/* for grabbing stuff */
+/* this rule is for when you specifically request this cursor class */
+.rpgui-cursor-grab-close,
+.rpgui-cursor-grab-close *
+{
+    cursor: url("public/cursor/grab-close.png") 10 0, auto !important;
+}
