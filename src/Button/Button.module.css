@@ -1,0 +1,74 @@
+.commonButton {
+  @apply inline-block bg-transparent bg-no-repeat border-none outline-none bg-clip-padding bg-origin-padding bg-center bg-cover max-w-full min-w-[140px] h-[60px] px-9 text-base;
+  @apply leading-10;
+}
+
+.commonButton:focus {
+  @apply outline-none;
+}
+
+.noGold {
+  @apply bg-[url('/button.png')];
+  background-size: 100% 100%;
+  padding-top: 0px;
+}
+
+.noGold.hover,
+.noGold:hover {
+  @apply bg-[url("/button-hover.png")];
+}
+
+.noGold.down,
+.noGold:active {
+  @apply bg-[url("/button-down.png")];
+}
+
+.gold {
+  @apply bg-[url('/button-golden.png')];
+  background-size: 100% 80%;
+  overflow: visible;
+}
+
+.gold.hover,
+.gold:hover {
+  @apply bg-[url("/button-golden-hover.png")];
+}
+
+/* button clicked */
+.gold.down,
+.gold:active {
+  @apply bg-[url("/button-golden-down.png")];
+}
+
+.gold:before {
+  white-space: nowrap;
+  display: inline-block;
+  content: "";
+  width: 34px;
+  display: block;
+  height: 150%;
+  background: transparent url("/button-golden-left.png") no-repeat right
+    center;
+  background-size: 100% 100%;
+  margin: 0 0 0 0;
+  left: 0px;
+  float: left;
+  margin-left: -50px;
+  margin-top: -17%;
+}
+
+.gold:after {
+  white-space: nowrap;
+  display: block;
+  content: "";
+  width: 34px;
+  height: 150%;
+  background: transparent url("/button-golden-right.png") no-repeat left
+    center;
+  background-size: 100% 100%;
+  margin: 0 0 0 0;
+  right: 0px;
+  float: right;
+  margin-right: -50px;
+  margin-top: -17%;
+}
