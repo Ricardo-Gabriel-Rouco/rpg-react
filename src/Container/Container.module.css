@@ -6,7 +6,7 @@
 
 /* "shinny" | "grey" */
 .container.framed {
-  @apply border-solid;
+  border: solid;
   border-image: repeat;
   border-image-source: url("/border-image.png");
   border-image-slice: 6 6 6 6;
@@ -71,25 +71,25 @@
 }
 
 .container.grey {
-    position: relative;
+  position: relative;
 
-	/* border */
-	border-style: solid;
-	border-image-source: url("/border-image-grey.png");
-	border-image-repeat: repeat;
-	border-image-slice: 3 3 3 3;
-	border-image-width: 7px;
-	border-width: 7px;
-	padding: 12px;
+  /* border */
+  border-style: solid;
+  border-image-source: url("/border-image-grey.png");
+  border-image-repeat: repeat;
+  border-image-slice: 3 3 3 3;
+  border-image-width: 7px;
+  border-width: 7px;
+  padding: 12px;
 
-	/* internal border */
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-	box-sizing: border-box;
+  /* internal border */
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 
-	/* background */
-	background: url("/background-image-grey.png") repeat repeat;
-	background-clip: padding-box;
-	background-origin: padding-box;
-	background-position: center;
+  /* background */
+  background: url("/background-image-grey.png") repeat repeat;
+  background-clip: padding-box;
+  background-origin: padding-box;
+  background-position: center;
 }

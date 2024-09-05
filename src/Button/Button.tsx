@@ -10,15 +10,13 @@ const Button: FC<PropsWithChildren<buttonProps>> = ({
   golden = false,
 }) => {
   return (
-    <div>
       <button
         className={`${styles.commonButton} ${
           golden ? styles.gold : styles.noGold
-        }`}
+        } disabled-rpg`}
       >
         {children}
       </button>
-    </div>
   );
 };
 
