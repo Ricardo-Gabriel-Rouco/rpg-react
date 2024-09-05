@@ -1,10 +1,10 @@
-import Button from "./Button/Button";
+import CheckBox from "./CheckBox/CheckBox";
 import "./App.css";
 
 function App() {
   return (
     <>
-      <Button golden={true}>Hola</Button>
+      <CheckBox html="hola" gold={false}>Hola</CheckBox>
     </>
   );
 }

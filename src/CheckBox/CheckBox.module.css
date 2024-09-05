@@ -1,0 +1,23 @@
+.commonInput {
+    display: none;
+}
+
+.commonInput.regular + label{
+    @apply bg-[url("/checkbox-off.png")] bg-no-repeat; 
+    @apply inline-block;
+    @apply leading-6;
+    background-size: auto 100%; 
+    @apply pl-9;
+    @apply h-6;
+    @apply my-3;
+}
+
+.commonInput.regular:checked +label{
+    @apply inline-block;
+    @apply leading-6;
+    @apply bg-[url("/checkbox-on.png")] bg-no-repeat; 
+    background-size: auto 100%; 
+    @apply pl-9;
+    @apply h-6;
+    @apply my-3;
+}
