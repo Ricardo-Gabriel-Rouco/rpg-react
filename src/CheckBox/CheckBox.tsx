@@ -5,6 +5,7 @@ interface checkProps {
   type?: "radio" | "checkbox";
   gold?: boolean;
   html: string;
+  name?: string;
 }
 
 const CheckBox: FC<PropsWithChildren<checkProps>> = ({
@@ -12,6 +13,7 @@ const CheckBox: FC<PropsWithChildren<checkProps>> = ({
   type = "checkbox",
   gold = false,
   html,
+  name
 }) => {
   return (
     <>
@@ -21,6 +23,7 @@ const CheckBox: FC<PropsWithChildren<checkProps>> = ({
           gold ? styles.golden : styles.regular
         }`}
         id={html} // Add id attribute for accessibility
+        name={name}
       />
       <label htmlFor={html}>{children}</label>
     </>

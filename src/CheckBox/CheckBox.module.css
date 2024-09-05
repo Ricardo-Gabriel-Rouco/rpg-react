@@ -1,23 +1,89 @@
+/* .content {
+
+} */
+
 .commonInput {
-    display: none;
+  display: none;
 }
 
-.commonInput.regular + label{
-    @apply bg-[url("/checkbox-off.png")] bg-no-repeat; 
+input[type="checkbox"].commonInput.regular + label {
+  @apply bg-[url("/checkbox-off.png")] bg-no-repeat;
+  @apply inline-block;
+  @apply leading-6;
+  background-size: auto 100%;
+  @apply pl-9;
+  @apply h-6;
+  @apply my-3;
+}
+
+input[type="checkbox"].commonInput.regular:checked + label {
+  /* @apply inline-block;
+    @apply leading-6; */
+  @apply bg-[url("/checkbox-on.png")] bg-no-repeat;
+  background-size: auto 100%;
+  /* @apply pl-9;
+    @apply h-6;
+    @apply my-3; */
+}
+
+input[type="checkbox"].commonInput.golden + label {
+  @apply inline-block;
+  @apply leading-6;
+  background: url("/checkbox-golden-off.png") no-repeat;
+  background-size: auto 100%;
+  @apply pl-9;
+  @apply h-6;
+  @apply my-3;
+}
+
+input[type="checkbox"].commonInput.golden:checked + label {
+  background: url("/checkbox-golden-on.png") no-repeat;
+  background-size: auto 100%;
+}
+
+/* 
+input[type="radio"]
+input[type="radio"]
+input[type="radio"]
+input[type="radio"]
+*/
+
+input[type="radio"].commonInput.regular + label {
+  @apply bg-[url("/radio-off.png")] bg-no-repeat;
+  @apply inline-block;
+  @apply leading-6;
+  background-size: auto 100%;
+  @apply pl-9;
+  @apply h-6;
+  @apply my-3;
+}
+
+input[type="radio"].commonInput.regular:checked + label {
+  /* @apply inline-block;
+      @apply leading-6; */
+  @apply bg-[url("/radio-on.png")] bg-no-repeat;
+  background-size: auto 100%;
+  /* @apply pl-9;
+      @apply h-6;
+      @apply my-3; */
+}
+
+input[type="radio"].commonInput.golden + label {
+    @apply bg-[url("/radio-golden-off.png")] bg-no-repeat;
     @apply inline-block;
     @apply leading-6;
-    background-size: auto 100%; 
+    background-size: auto 100%;
     @apply pl-9;
     @apply h-6;
     @apply my-3;
-}
-
-.commonInput.regular:checked +label{
-    @apply inline-block;
-    @apply leading-6;
-    @apply bg-[url("/checkbox-on.png")] bg-no-repeat; 
-    background-size: auto 100%; 
-    @apply pl-9;
-    @apply h-6;
-    @apply my-3;
-}
+  }
+  
+  input[type="radio"].commonInput.golden:checked + label {
+    /* @apply inline-block;
+        @apply leading-6; */
+    @apply bg-[url("/radio-golden-on.png")] bg-no-repeat;
+    background-size: auto 100%;
+    /* @apply pl-9;
+        @apply h-6;
+        @apply my-3; */
+  }
