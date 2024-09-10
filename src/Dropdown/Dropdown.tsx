@@ -1,40 +1,52 @@
 import { FC, PropsWithChildren, useState } from "react";
+import styles from "./Dropdown.module.css";
 
 interface dropProps {
   values: string[];
+  nameFor: string;
   selectedOption: string;
-  onChangeOption: (event: React.ChangeEvent<HTMLSelectElement>) => void;
+  onChangeOption: (value: string) => void; // Updated signature
 }
 
 const Dropdown: FC<PropsWithChildren<dropProps>> = ({
   values,
   selectedOption,
   onChangeOption,
+  nameFor,
   children,
 }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false); // State for dropdown visibility
 
-  const handleOpen = () => {
-    setIsOpen(!isOpen)
-  }
+  const handleClick = () => setIsOpen(!isOpen);
+
+  const handleOptionChange = (value: string) => {
+    onChangeOption(value);
+    setIsOpen(false); // Close dropdown on selection
+  };
 
   return (
-    <div className="dropdown">
-      {" "}
-      {/* Add a wrapper class for styling */}
-      {/* <button onClick={handleToggle}>{selectedOption}</button> Display the selected option */}
+    <div className={styles.dropdown}>
+      <div
+        onClick={handleClick}
+        className={`${styles.dropdownTrigger} ${styles.rpguiDropdownSize} ${styles.rpguiDropdownBorder} ${styles.rpguiDropdownBackground} ${styles.rpguiDropdownFont}`}
+      >
+        <span className={styles.dropdownArrow}>&#9660;</span> {/* Down arrow */}
+        {selectedOption} {/* Display selected option */}
+      </div>
       {isOpen && (
-        <select onChange={onChangeOption}>
+        <ul
+          className={`${styles.dropdownMenu} ${styles.rpguiDropdownBackground} ${styles.rpguiDropdownBorder}`}
+        >
           {values.map((value) => (
-            <option
+            <li
               key={value}
-              value={value}
-              selected={value === selectedOption}
+              className={`${styles.dropdownItem} ${styles.rpguiDropdownOptionPadding} ${styles.rpguiDropdownFont}`}
+              onClick={() => handleOptionChange(value)}
             >
               {value}
-            </option>
+            </li>
           ))}
-        </select>
+        </ul>
       )}
       {children} {/* Render any optional content within the dropdown */}
     </div>

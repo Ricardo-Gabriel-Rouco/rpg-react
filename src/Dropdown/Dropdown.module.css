@@ -1,0 +1,69 @@
+/* Font styles for both header and options */
+.rpguiDropdownFont {
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  color: white;
+}
+
+/* Default size for both header and options */
+.rpguiDropdownSize {
+  min-height: 40px;
+  margin-top: 0px;
+}
+
+/* Border styles for both header and options */
+.rpguiDropdownBorder {
+  border-style: solid;
+  border-width: 7px 7px 7px 7px;
+  /* Replace with your actual image paths */
+  border-image: url("/select-border-image.png") 10% repeat repeat;
+}
+
+/* Background styles for both header and options */
+.rpguiDropdownBackground {
+  background: url("/select-background-image.png") repeat repeat;
+  background-clip: padding-box;
+  background-origin: padding-box;
+  background-position: center;
+}
+
+/* Padding for options */
+.rpguiDropdownOptionPadding {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 6px;
+}
+
+/* Selected value style (no change needed) */
+.rpgui-content .rpgui-dropdown-imp-header {
+  color: white;
+  min-height: 22px;
+  padding: 5px 10px 0 10px;
+  margin: 0 0 0 0;
+  position: relative;
+}
+
+.dropdownTrigger {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+}
+
+.dropdownArrow {
+  margin-right: 5px;
+}
+
+.dropdownMenu {
+  background-color: #fff;
+  list-style: none;
+  padding: 0;
+  z-index: 10;
+  top: 100%; /* Positioned below the trigger element */
+  left: 0; /* Aligned to the left edge of the trigger */
+}
+
+/* Option hover style */
+.dropdownItem:hover {
+  cursor: pointer;
+  color: yellow;
+}
