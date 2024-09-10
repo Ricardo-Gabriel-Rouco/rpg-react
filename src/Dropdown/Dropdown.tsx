@@ -3,7 +3,6 @@ import styles from "./Dropdown.module.css";
 
 interface dropProps {
   values: string[];
-  nameFor: string;
   selectedOption: string;
   onChangeOption: (value: string) => void; // Updated signature
 }
@@ -12,7 +11,6 @@ const Dropdown: FC<PropsWithChildren<dropProps>> = ({
   values,
   selectedOption,
   onChangeOption,
-  nameFor,
   children,
 }) => {
   const [isOpen, setIsOpen] = useState(false); // State for dropdown visibility
