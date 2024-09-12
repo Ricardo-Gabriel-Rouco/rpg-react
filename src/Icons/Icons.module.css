@@ -1,0 +1,69 @@
+/**
+* Icon styles.
+*/
+
+.icon {
+    display: inline-block;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;                
+}
+
+.sword {
+    background-image: url('/icons/sword.png');
+}
+
+.shield {
+    background-image: url('/icons/shield.png');
+}
+
+.exclamation {
+    background-image: url('/icons/exclamation.png');
+}
+
+.potionRed {
+    background-image: url('/icons/potion-red.png');
+}
+
+.potionGreen {
+    background-image: url('/icons/potion-green.png');
+}
+
+.potionBlue {
+    background-image: url('/icons/potion-blue.png');
+}
+
+.weaponSlot {
+    background-image: url('/icons/weapon-slot.png');
+}
+
+.shieldSlot {
+    background-image: url('/icons/shield-slot.png');
+}
+
+.armorSlot {
+    background-image: url('/icons/armor-slot.png');
+}
+
+.helmetSlot {
+    background-image: url('/icons/helmet-slot.png');
+}
+
+.ringSlot {
+    background-image: url('/icons/ring-slot.png');
+}
+
+.potionSlot {
+    background-image: url('/icons/potion-slot.png');
+}
+
+.magicSlot {
+    background-image: url('/icons/magic-slot.png');
+}
+
+.shoesSlot {
+    background-image: url('/icons/shoes-slot.png');
+}
+
+.emptySlot {
+    background-image: url('/icons/empty-slot.png');
+}
