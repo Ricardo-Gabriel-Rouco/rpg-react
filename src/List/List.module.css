@@ -4,7 +4,8 @@
   /* font */
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
   color: white;
-
+  text-wrap: nowrap;
+  width: fit-content;
   /* default size */
   min-height: 40px;
   margin-top: 0px;
@@ -29,7 +30,7 @@
 }
 
 .rpguiListImp::-webkit-scrollbar {
-  width: 16px;
+  width: 18px;
 }
 
 .rpguiListImp::-webkit-scrollbar-button {
@@ -40,13 +41,15 @@
 }
 
 .rpguiListImp::-webkit-scrollbar-track {
-    background: url('/scrollbar-track.png') no-repeat center;
-    background-size: cover;
+    background: url('/scrollbar-track.png');
+    background-size: 18px 60px;
+    background-repeat: repeat-y;
   }
 
 .rpguiListImp::-webkit-scrollbar-thumb {
     background: url('/scrollbar-thumb.png') no-repeat center;
-    background-size: cover;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
 

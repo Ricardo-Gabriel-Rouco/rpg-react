@@ -19,7 +19,7 @@ const List: FC<PropsWithChildren<listProps>> = ({
   options,
   selectedValue,
   optionHandler,
-  size = "5rem"
+  size = "10rem"
 }) => {
   return (
     <>
