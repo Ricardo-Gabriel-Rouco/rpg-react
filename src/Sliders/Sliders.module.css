@@ -1,0 +1,184 @@
+.sliderContainer {
+  height: 20px;
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center; /* Alinear verticalmente los bordes y el slider */
+  position: relative;
+}
+
+.sliderLeftEdge {
+  height: 20px;
+  width: 20px;
+  background-image: url("/slider-left.png");
+  background-size: 100% 100%;
+  z-index: 2;
+}
+
+.sliderRightEdge {
+  height: 20px;
+  width: 20px;
+  background-image: url("/slider-right.png");
+  background-size: 100% 100%;
+}
+
+.sliderInput {
+  appearance: none;
+  flex-grow: 1; /* Hacer que el input ocupe el espacio disponible entre los bordes */
+  height: 20px;
+  background: transparent;
+  position: relative;
+  z-index: 1;
+}
+
+.sliderInput::-webkit-slider-runnable-track {
+  height: 20px;
+  background-image: url("/slider-track.png");
+  background-repeat: repeat-x;
+  background-size: 24px 100%;
+}
+
+.sliderInput::-webkit-slider-thumb {
+  appearance: none;
+  height: 30px;
+  width: 15px;
+  margin-top: -5px;
+  background-image: url("/slider-thumb.png");
+  background-size: 100% 100%;
+  z-index: 2;
+  position: relative;
+}
+
+/* Opcional para Firefox */
+.sliderInput::-moz-range-thumb {
+  height: 30px;
+  width: 15px;
+  background-image: url("/slider-thumb.png");
+  background-size: 100% 100%;
+}
+
+.sliderInput::-moz-range-track {
+  background-image: url("/slider-track.png");
+  background-repeat: repeat-x;
+  background-size: 24px 100%;
+  height: 20px;
+}
+
+
+/* golden slider */
+.sliderContainerGolden {
+    height: 30px;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center; /* Alinear verticalmente los bordes y el slider */
+    position: relative;
+  }
+  
+  .sliderLeftEdgeGolden {
+    height: 30px;
+    width: 30px;
+    background-image: url("/slider-left-golden.png");
+    background-size: 100% 100%;
+    z-index: 2;
+  }
+  
+  .sliderRightEdgeGolden {
+    height: 30px;
+    width: 30px;
+    background-image: url("/slider-right-golden.png");
+    background-size: 100% 100%;
+    z-index: 2;
+  }
+
+  .sliderInputGolden {
+    appearance: none;
+    width: 100%;
+    background: transparent;
+    position: relative;
+    height: 100%;
+    z-index: 1;
+  }
+  
+  .sliderInputGolden::-webkit-slider-thumb {
+    appearance: none;
+    height: 36px;
+    width: 18px;
+    margin-top: -4px;
+    background-image: url("/slider-thumb-golden.png");
+    background-size: 100% 100%;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .sliderInputGolden::-webkit-slider-runnable-track {
+    height: 30px;
+    background: transparent; /* El track visual está en .sliderTrackGolden */
+    background-image: url("slider-track-golden.png");
+    background-repeat: repeat-x;
+    background-size: 24px 100%;
+  }
+  
+  .sliderInputGolden::-moz-range-thumb {
+    height: 36px;
+    width: 18px;
+    background-image: url("/slider-thumb-golden.png");
+    background-size: 100% 100%;
+  }
+  
+  .sliderInputGolden::-moz-range-track {
+    background: transparent; /* El track visual está en .sliderTrackGolden */
+    height: 30px;
+    background-image: url("slider-track-golden.png");
+    background-repeat: repeat-x;
+    background-size: 24px 100%;
+  }
+
+/* golden slider */
+/* .sliderContainerGolden {
+  height: 30px;
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  position: absolute;
+}
+
+.sliderLeftEdgeGolden {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  left: 0;
+  background-image: url("/slider-left-golden.png");
+  background-size: 100% 100%;
+}
+
+.sliderRightEdgeGolden {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  right: 0;
+  background-image: url("/slider-right-golden.png");
+  background-size: 100% 100%;
+}
+
+.sliderTrackGolden {
+  position: absolute;
+  height: 30px;
+  left: 0;
+  right: 0;
+  background-image: url("/slider-track-golden.png");
+  background-repeat: repeat-x;
+  background-size: 40px 100%;
+}
+
+.sliderThumbGolden {
+  position: absolute;
+  height: 36px;
+  width: 18px;
+  margin-top: -4px;
+  left: 40px;
+  background-image: url("/slider-thumb-golden.png");
+  background-size: 100% 100%;
+} */
