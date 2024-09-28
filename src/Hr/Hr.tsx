@@ -1,12 +1,9 @@
 import { FC } from "react";
 import styles from "./Hr.module.css";
+import { commonProps } from "../types";
 
-interface hrProps {
-    golden?: boolean
-}
-
-const Hr: FC<hrProps> = ({golden = false}) => {
-  return <hr className={`${golden ? styles.golden : styles.regular } w-64`}/>;
+const Hr: FC<commonProps> = ({ gold = false }) => {
+  return <hr className={`${gold ? styles.golden : styles.regular} w-64`} />;
 };
 
 export default Hr;

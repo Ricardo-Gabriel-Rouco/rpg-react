@@ -1,11 +1,8 @@
 import { FC, PropsWithChildren } from "react";
 import styles from "./Container.module.css";
+import { container } from "../types";
 
-interface checkProps {
-  type?: "framed" | "golden" | "shinny" | "grey";
-}
-
-const Container: FC<PropsWithChildren<checkProps>> = ({
+const Container: FC<PropsWithChildren<container>> = ({
   children,
   type = "framed",
 }) => {

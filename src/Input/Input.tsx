@@ -1,15 +1,8 @@
 import { FC, PropsWithChildren } from "react";
 import styles from "./Input.module.css"
+import { inputs } from "../types";
 
-interface inputProps {
-  label: string;
-  name: string;
-  type?: "text" | "textarea";
-  changeFunction?: () => void;
-  value? : string
-}
-
-const Input: FC<PropsWithChildren<inputProps>> = ({
+const Input: FC<PropsWithChildren<inputs>> = ({
   label,
   name,
   type = "text",

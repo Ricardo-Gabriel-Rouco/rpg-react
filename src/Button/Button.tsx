@@ -1,18 +1,15 @@
 import { FC, PropsWithChildren } from "react";
 import styles from "./Button.module.css";
+import {commonProps} from "../types"
 
-interface buttonProps {
-  golden?: boolean | null;
-}
-
-const Button: FC<PropsWithChildren<buttonProps>> = ({
+const Button: FC<PropsWithChildren<commonProps>> = ({
   children,
-  golden = false,
+  gold = false,
 }) => {
   return (
       <button
         className={`${styles.commonButton} ${
-          golden ? styles.gold : styles.noGold
+          gold ? styles.gold : styles.noGold
         } disabled-rpg`}
       >
         {children}

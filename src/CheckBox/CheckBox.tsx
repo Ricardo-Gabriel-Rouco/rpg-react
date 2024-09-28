@@ -1,14 +1,9 @@
 import { FC, PropsWithChildren } from "react";
 import styles from "./CheckBox.module.css";
+import { checkBox } from "../types";
 
-interface checkProps {
-  type?: "radio" | "checkbox";
-  gold?: boolean;
-  html: string;
-  name?: string;
-}
 
-const CheckBox: FC<PropsWithChildren<checkProps>> = ({
+const CheckBox: FC<PropsWithChildren<checkBox>> = ({
   children,
   type = "checkbox",
   gold = false,

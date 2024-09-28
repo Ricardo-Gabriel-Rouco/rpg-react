@@ -1,29 +1,8 @@
+import { FC } from "react";
+import { icons } from "../types";
 import styles from "./Icons.module.css";
 
-type PxSize = `${number}px`;
-type RemSize = `${number}rem`;
-
-interface IconProps {
-  name:
-    | "sword"
-    | "shield"
-    | "exclamation"
-    | "potionRed"
-    | "potionGreen"
-    | "potionBlue"
-    | "weaponSlot"
-    | "shieldSlot"
-    | "armorSlot"
-    | "helmetSlot"
-    | "ringSlot"
-    | "potionSlot"
-    | "magicSlot"
-    | "shoesSlot"
-    | "emptySlot";
-  size?: RemSize | PxSize;
-}
-
-const Icons = ({ name, size = "64px" }: IconProps) => {
+const Icons: FC<icons> = ({ name, size = "64px" }) => {
   // Aquí podrías hacer validaciones si lo necesitas
   const isValidSize = (size: string) => {
     return /^\d+(rem|px)$/.test(size); // Valida si el formato es correcto

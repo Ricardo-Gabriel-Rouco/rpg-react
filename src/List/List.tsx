@@ -1,25 +1,13 @@
 import { FC, PropsWithChildren } from "react";
 import styles from "./List.module.css";
+import { lists } from "../types";
 
-type Option = {
-  label: string;
-  value: string;
-};
-
-interface listProps {
-  title?: string;
-  options: Option[];
-  selectedValue: Option;
-  optionHandler: (value: string) => void;
-  size?: string
-}
-
-const List: FC<PropsWithChildren<listProps>> = ({
+const List: FC<PropsWithChildren<lists>> = ({
   title,
   options,
   selectedValue,
   optionHandler,
-  size = "10rem"
+  size = "10rem",
 }) => {
   return (
     <>

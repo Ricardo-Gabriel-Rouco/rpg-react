@@ -1,24 +1,11 @@
 import { FC, PropsWithChildren } from "react";
 import styles from "./Text.module.css";
+import { paragraphs } from "../types";
 
-interface paragraphsTypes {
-  type?:
-    | "text"
-    | "title1"
-    | "title2"
-    | "title3"
-    | "title4"
-    | "link"
-    | "label"
-    | "list"
-    | "span";
-  url?: string
-}
-
-const Text: FC<PropsWithChildren<paragraphsTypes>> = ({
+const Text: FC<PropsWithChildren<paragraphs>> = ({
   children,
   type = "text",
-  url
+  url,
 }) => {
   switch (type) {
     case "text":
@@ -40,7 +27,11 @@ const Text: FC<PropsWithChildren<paragraphsTypes>> = ({
       return <label className={styles.label}>{children}</label>;
 
     case "link":
-      return <a href={url} className={styles.link}>{children}</a>;
+      return (
+        <a href={url} className={styles.link}>
+          {children}
+        </a>
+      );
 
     case "list":
       return <li className={styles.list}>{children}</li>;

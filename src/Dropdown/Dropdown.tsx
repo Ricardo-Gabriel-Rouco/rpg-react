@@ -1,13 +1,8 @@
 import { FC, PropsWithChildren, useState } from "react";
 import styles from "./Dropdown.module.css";
+import { dropdown } from "../types";
 
-interface dropProps {
-  values: string[];
-  selectedOption: string;
-  onChangeOption: (value: string) => void; // Updated signature
-}
-
-const Dropdown: FC<PropsWithChildren<dropProps>> = ({
+const Dropdown: FC<PropsWithChildren<dropdown>> = ({
   values,
   selectedOption,
   onChangeOption,

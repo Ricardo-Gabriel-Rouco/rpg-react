@@ -1,32 +1,17 @@
 import { FC } from "react";
 import styles from "./Sliders.module.css";
+import { sliders } from "../types";
 
-interface sliderProps {
-  value: number;
-  step: number;
-  min: number;
-  max: number;
-  onChange: (e: any) => void;
-  golden: boolean;
-}
-
-const Slider: FC<sliderProps> = ({
-  value,
-  step,
-  min,
-  max,
-  golden,
-  onChange,
-}) => {
+const Slider: FC<sliders> = ({ value, step, min, max, gold, onChange }) => {
   return (
     <div
-      className={golden ? styles.sliderContainerGolden : styles.sliderContainer}
+      className={gold ? styles.sliderContainerGolden : styles.sliderContainer}
     >
       <div
-        className={golden ? styles.sliderLeftEdgeGolden : styles.sliderLeftEdge}
+        className={gold ? styles.sliderLeftEdgeGolden : styles.sliderLeftEdge}
       />
       <input
-        className={golden ? styles.sliderInputGolden : styles.sliderInput}
+        className={gold ? styles.sliderInputGolden : styles.sliderInput}
         type="range"
         value={value}
         step={step}
@@ -35,9 +20,7 @@ const Slider: FC<sliderProps> = ({
         onChange={onChange}
       />
       <div
-        className={
-          golden ? styles.sliderRightEdgeGolden : styles.sliderRightEdge
-        }
+        className={gold ? styles.sliderRightEdgeGolden : styles.sliderRightEdge}
       />
     </div>
   );

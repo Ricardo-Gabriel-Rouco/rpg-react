@@ -1,13 +1,8 @@
 import { FC } from "react";
 import styles from "./Progress.module.css";
+import { progress } from "../types";
 
-type progressTypes = {
-  color?: "red" | "blue" | "green";
-  value?: number;
-  max?: number;
-};
-
-const Progress: FC<progressTypes> = ({
+const Progress: FC<progress> = ({
   value = 1,
   max = 10,
   color,
