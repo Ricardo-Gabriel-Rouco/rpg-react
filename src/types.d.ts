@@ -2,6 +2,7 @@ import { PxSize, RemSize, Option } from "./specialTypes";
 
 export interface commonProps {
   gold?: boolean | null;
+  disabled? : boolean | null 
 }
 
 export interface checkBox extends commonProps {

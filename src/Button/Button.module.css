@@ -9,7 +9,7 @@
 .noGold {
   @apply bg-[url('/button.png')];
   background-size: 100% 100%;
-  padding-top: 0px;
+  @apply pt-0;
 }
 
 .noGold:hover {
@@ -23,17 +23,16 @@
 .gold {
   @apply bg-[url('/button-golden.png')];
   background-size: 100% 80%;
-  overflow: visible;
-  position: relative;
+  @apply overflow-visible;
+  @apply relative;
 }
-
 
 .gold::before,
 .gold::after {
   content: "";
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  @apply absolute;
+  @apply top-[50%];
+  @apply translate-y-[-50%];
   width: 34px;
   height: 110%;
   background-position: center;
@@ -52,7 +51,6 @@
 
   background-image: url("/button-golden-right.png");
 }
-
 
 /* .gold::before {
   white-space: nowrap;
@@ -91,4 +89,4 @@
 /* button clicked */
 .gold:active {
   @apply bg-[url("/button-golden-down.png")];
-} 
+}

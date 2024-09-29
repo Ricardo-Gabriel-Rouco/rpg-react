@@ -14,6 +14,21 @@
     filter: gray;
     color: #fff;
   }
+  .customCursor {
+    cursor: url("/cursor/default.png"), auto;
+  }
+  .selectCursor {
+    cursor: url("/cursor/select.png"), auto;
+  }
+}
+
+@layer utilities {
+  .pointCursor {
+    cursor: url("/cursor/point.png"), auto;
+  }
+  input[type="checkbox"].pointCursor {
+    cursor: url("/cursor/point.png"), auto;
+  }
 }
 
 @font-face {
