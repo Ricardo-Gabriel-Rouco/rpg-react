@@ -20,7 +20,7 @@ const CheckBox: FC<PropsWithChildren<checkBox>> = ({
         id={html}
         name={name}
       />
-      <label className="hover:pointCursor" htmlFor={html}>{children}</label>
+      <label className={` ${disabled && "disabled-rpg"} hover:pointCursor`} htmlFor={html}>{children}</label>
     </>
   );
 };

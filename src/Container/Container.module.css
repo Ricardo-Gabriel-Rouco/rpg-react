@@ -1,7 +1,7 @@
 .container {
-  position: fixed;
-  z-index: 10;
-  overflow: visible;
+  @apply fixed;
+  @apply z-10;
+  @apply overflow-visible;
 }
 
 /* "shinny" | "grey" */

@@ -7,7 +7,7 @@ const Container: FC<PropsWithChildren<container>> = ({
   type = "framed",
 }) => {
   return (
-    <div className={`${styles.container} ${styles[type]}`}>
+    <div className={`${styles.container} ${styles[type]} hover:customCursor`}>
         {children}
     </div>
   );
