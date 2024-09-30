@@ -16,7 +16,7 @@ export interface container {
 }
 
 export interface dropdown extends commonProps {
-  values: string[];
+  values: Option[];
   selectedOption: string;
   onChangeOption: (value: string) => void; // Updated signature
 }
@@ -53,7 +53,7 @@ export interface lists {
   title?: string;
   options: Option[];
   selectedValue: Option;
-  optionHandler: (value: string) => void;
+  optionHandler: (value: Option) => void;
   size?: string;
 }
 

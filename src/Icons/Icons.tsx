@@ -15,7 +15,7 @@ const Icons: FC<icons> = ({ name, size = "64px" }) => {
 
   return (
     <div
-      className={`${styles.icon} ${styles[name]} `}
+      className={`${styles.icon} ${styles[name]} customCursor`}
       style={{ height: `${size}`, width: `${size}` }}
     ></div>
   );

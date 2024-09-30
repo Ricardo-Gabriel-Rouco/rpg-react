@@ -35,13 +35,13 @@ const Dropdown: FC<PropsWithChildren<dropdown>> = ({
         <ul
           className={`${styles.dropdownMenu} ${styles.rpguiDropdownBackground} ${styles.rpguiDropdownBorder}`}
         >
-          {values.map((value) => (
+          {values.map((option) => (
             <li
-              key={value}
+              key={option.value}
               className={`${styles.dropdownItem} ${styles.rpguiDropdownOptionPadding} ${styles.rpguiDropdownFont}`}
-              onClick={() => handleOptionChange(value)}
+              onClick={() => handleOptionChange(option.value)}
             >
-              {value}
+              {option.label}
             </li>
           ))}
         </ul>

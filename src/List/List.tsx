@@ -12,14 +12,14 @@ const List: FC<PropsWithChildren<lists>> = ({
   return (
     <>
       {title && <label htmlFor={title}>{title}</label>}
-      <ul className={`${styles.rpguiListImp}`} style={{ height: `${size}` }}>
+      <ul className={`${styles.rpguiListImp} pointCursor`} style={{ height: `${size}` }}>
         {options.map((option, index) => (
           <li
             key={index}
             className={` ${
               selectedValue.value === option.value ? styles.rpguiSelected : ""
-            }`}
-            onClick={() => optionHandler(option.value)} // Manejador de clic que pasa el valor de la opción
+            } pointCursor`}
+            onClick={() => optionHandler(option)} // Manejador de clic que pasa el valor de la opción
           >
             {option.label}
           </li>

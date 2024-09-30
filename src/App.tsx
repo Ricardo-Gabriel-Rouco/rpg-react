@@ -3,18 +3,18 @@ import "./App.css";
 import Button from "./Button/Button";
 import CheckBox from "./CheckBox/CheckBox";
 import Container from "./Container/Container";
-import Dropdown from "./Dropdown/Dropdown";
+import List from "./List/List";
+import { Option } from "./specialTypes";
+
 
 const options = [
-  "1",
-  "2",
-  "3"
+  {label: "vagabond", value:"vagabond"}
 ]
 
 function App() {
-  const [option, setOptions] = useState<string>("")
+  const [option, setOptions] = useState<Option>(options[0])
 
-  const selectOption = (value: string) => {
+  const selectOption = (value: Option) => {
     setOptions(value)
   } 
 
@@ -25,7 +25,7 @@ function App() {
         <Button gold={true} />
 
         </div>
-        <Dropdown values={options} onChangeOption={selectOption} selectedOption={option} ></Dropdown>
+        <List optionHandler={selectOption} options={options} selectedValue={option}></List>
 
         <CheckBox html="prueba" name="hola">
           Hola

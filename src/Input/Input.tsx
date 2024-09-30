@@ -13,7 +13,7 @@ const Input: FC<PropsWithChildren<inputs>> = ({
   return (
     <div >
       <label htmlFor={label}>{label}</label>
-      <input className={styles.rpgInput} type={type} name={name}  onChange={changeFunction && changeFunction} value={value && value} />
+      <input className={`${styles.rpgInput} selectCursor`} type={type} name={name}  onChange={changeFunction && changeFunction} value={value && value} />
     </div>
   );
 };
