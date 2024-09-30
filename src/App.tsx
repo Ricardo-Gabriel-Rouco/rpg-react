@@ -4,6 +4,7 @@ import Button from "./Button/Button";
 import CheckBox from "./CheckBox/CheckBox";
 import Container from "./Container/Container";
 import List from "./List/List";
+import Progress from "./Progress/Progress";
 import { Option } from "./specialTypes";
 
 
@@ -27,6 +28,8 @@ function App() {
         </div>
         <List optionHandler={selectOption} options={options} selectedValue={option}></List>
 
+        <Progress max={10} value={1}></Progress>
+        
         <CheckBox html="prueba" name="hola">
           Hola
         </CheckBox>

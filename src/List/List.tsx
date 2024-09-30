@@ -8,11 +8,12 @@ const List: FC<PropsWithChildren<lists>> = ({
   selectedValue,
   optionHandler,
   size = "10rem",
+  disabled
 }) => {
   return (
     <>
       {title && <label htmlFor={title}>{title}</label>}
-      <ul className={`${styles.rpguiListImp} pointCursor`} style={{ height: `${size}` }}>
+      <ul className={`${styles.rpguiListImp} pointCursor ${disabled && "disabled-rpg"}`} style={{ height: `${size}` }}>
         {options.map((option, index) => (
           <li
             key={index}

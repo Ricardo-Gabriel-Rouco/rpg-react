@@ -49,7 +49,7 @@ export interface inputs {
   value?: string;
 }
 
-export interface lists {
+export interface lists extends commonProps {
   title?: string;
   options: Option[];
   selectedValue: Option;
@@ -57,7 +57,7 @@ export interface lists {
   size?: string;
 }
 
-export interface progress {
+export interface progress extends commonProps {
   color?: "red" | "blue" | "green";
   value?: number;
   max?: number;

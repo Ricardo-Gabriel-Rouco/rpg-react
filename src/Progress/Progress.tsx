@@ -2,21 +2,23 @@ import { FC } from "react";
 import styles from "./Progress.module.css";
 import { progress } from "../types";
 
-const Progress: FC<progress> = ({
-  value = 1,
-  max = 10,
-  color,
-}) => {
+const Progress: FC<progress> = ({ value = 1, max = 10, color, disabled }) => {
   // Calcular el ancho del relleno basado en el valor y el máximo
   const fillWidth = (value / max) * 100;
 
   return (
     // className={styles.rpguiProgress}
-    <div className={styles.rpguiProgress}>
+    <div
+      className={`${styles.rpguiProgress} ${
+        disabled && "disabled-rpg"
+      } hover:customCursor`}
+    >
       <div className={styles.rpguiProgressLeftEdge}></div>
       <div className={styles.rpguiProgressTrack}>
         <div
-          className={`${styles.rpguiProgressFill} ${color ? styles[color] : ""}`}
+          className={`${styles.rpguiProgressFill} ${
+            color ? styles[color] : ""
+          }`}
           style={{ width: `${fillWidth}%` }} // Establecer el ancho dinámicamente
         ></div>
       </div>

@@ -2,6 +2,7 @@
   @apply fixed;
   @apply z-10;
   @apply overflow-visible;
+  @apply w-full
 }
 
 /* "shinny" | "grey" */
