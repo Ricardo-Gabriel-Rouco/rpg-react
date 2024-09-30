@@ -7,18 +7,23 @@ const Dropdown: FC<PropsWithChildren<dropdown>> = ({
   selectedOption,
   onChangeOption,
   children,
+  disabled,
 }) => {
   const [isOpen, setIsOpen] = useState(false); // State for dropdown visibility
 
-  const handleClick = () => setIsOpen(!isOpen);
+  const handleClick = () => {
+    if (!disabled) setIsOpen(!isOpen); // Prevent opening if disabled
+  };
 
   const handleOptionChange = (value: string) => {
-    onChangeOption(value);
-    setIsOpen(false); // Close dropdown on selection
+    if (!disabled) {
+      onChangeOption(value);
+      setIsOpen(false); // Close dropdown on selection
+    }
   };
 
   return (
-    <div className={styles.dropdown}>
+    <div className={`${styles.dropdown} ${disabled ? "disabled-rpg" : ""}`}>
       <div
         onClick={handleClick}
         className={`${styles.dropdownTrigger} ${styles.rpguiDropdownSize} ${styles.rpguiDropdownBorder} ${styles.rpguiDropdownBackground} ${styles.rpguiDropdownFont}`}

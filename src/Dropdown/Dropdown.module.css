@@ -34,6 +34,7 @@
 }
 
 /* Selected value style (no change needed) */
+/* Este estilo no se utiliza en el componente actual */
 .rpgui-content .rpgui-dropdown-imp-header {
   color: white;
   min-height: 22px;
@@ -42,17 +43,20 @@
   position: relative;
 }
 
+/* Dropdown trigger styles */
 .dropdownTrigger {
-  cursor: pointer;
+  cursor: url("/cursor/point.png"), auto;
   display: flex;
   align-items: center;
   padding: 5px 10px;
 }
 
+/* Dropdown arrow styles */
 .dropdownArrow {
   margin-right: 5px;
 }
 
+/* Dropdown menu styles */
 .dropdownMenu {
   background-color: #fff;
   list-style: none;
@@ -66,4 +70,17 @@
 .dropdownItem:hover {
   cursor: pointer;
   color: yellow;
+  cursor: url("/cursor/point.png"), auto;
 }
+
+/* Estilos comentados que no se utilizan */
+
+/* 
+.rpgui-content .rpgui-dropdown-imp-header {
+  color: white;
+  min-height: 22px;
+  padding: 5px 10px 0 10px;
+  margin: 0 0 0 0;
+  position: relative;
+} 
+*/

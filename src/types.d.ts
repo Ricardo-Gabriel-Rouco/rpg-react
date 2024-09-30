@@ -15,7 +15,7 @@ export interface container {
   type?: "framed" | "golden" | "shinny" | "grey";
 }
 
-export interface dropdown {
+export interface dropdown extends commonProps {
   values: string[];
   selectedOption: string;
   onChangeOption: (value: string) => void; // Updated signature
