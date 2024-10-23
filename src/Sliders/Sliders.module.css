@@ -116,7 +116,7 @@
   .sliderInputGolden::-webkit-slider-runnable-track {
     height: 30px;
     background: transparent; /* El track visual está en .sliderTrackGolden */
-    background-image: url("slider-track-golden.png");
+    background-image: url("/slider-track-golden.png");
     background-repeat: repeat-x;
     background-size: 24px 100%;
   }
@@ -131,7 +131,7 @@
   .sliderInputGolden::-moz-range-track {
     background: transparent; /* El track visual está en .sliderTrackGolden */
     height: 30px;
-    background-image: url("slider-track-golden.png");
+    background-image: url("/slider-track-golden.png");
     background-repeat: repeat-x;
     background-size: 24px 100%;
   }

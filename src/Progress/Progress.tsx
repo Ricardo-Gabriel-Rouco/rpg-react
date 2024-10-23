@@ -11,7 +11,7 @@ const Progress: FC<progress> = ({ value = 1, max = 10, color, disabled }) => {
     <div
       className={`${styles.rpguiProgress} ${
         disabled && "disabled-rpg"
-      } hover:customCursor`}
+      } px-1  hover:customCursor`}
     >
       <div className={styles.rpguiProgressLeftEdge}></div>
       <div className={styles.rpguiProgressTrack}>
@@ -22,7 +22,7 @@ const Progress: FC<progress> = ({ value = 1, max = 10, color, disabled }) => {
           style={{ width: `${fillWidth}%` }} // Establecer el ancho dinámicamente
         ></div>
       </div>
-      <div className={styles.rpguiProgressRightEdge}></div>
+      <div className={`${styles.rpguiProgressRightEdge}`} ></div>
     </div>
   );
 };

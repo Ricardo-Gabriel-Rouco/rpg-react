@@ -1,50 +1,17 @@
-# React + TypeScript + Vite
+# RPG react
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![npm version](https://img.shields.io/npm/v/react-revival-css-library)](https://www.npmjs.com/package/rpg-react)
+[![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/Ricardo-Gabriel-Rouco/rpg-react/blob/main/LICENSE)
 
-Currently, two official plugins are available:
+**RPG React** es una librería de componentes de React pensada para revitalizar una librería de CSS clásica, integrando sus estilos en aplicaciones modernas de React de manera simple y eficiente.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Punto importante: la libreria original NO es mia, sino que pertenece a Ronen Ness, el link origina a su libreria es:
+[RPGUI](https://github.com/RonenNess/RPGUI), y este "port" por asi llamarlo, solo es con el fin de reutilizarla en react como una libreria mas de componentes y poder agregarla a distintas plataformas con tecnologias mas nuevas. 
 
-## Expanding the ESLint configuration
+## Instalación
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Puedes instalar la librería a través de npm o yarn:
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+npm install rpg-react
 ```

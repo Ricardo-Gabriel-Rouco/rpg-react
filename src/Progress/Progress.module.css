@@ -9,7 +9,7 @@
     width: 100%;
     margin-top: 5px;
     margin-bottom: 5px;
-    position: absolute;
+    position: relative;
 }
 
 /* progress bar left edge */
@@ -19,7 +19,7 @@
     height: 42px;
     width: 40px;
     left: 0px;
-    background-image: url('progress-bar-left.png');
+    background-image: url('/progress-bar-left.png');
     background-size: 100% 100%;
 }
 
@@ -30,7 +30,7 @@
     height: 42px;
     width: 40px;
     right: 0px;
-    background-image: url('progress-bar-right.png');
+    background-image: url('/progress-bar-right.png');
     background-size: 100% 100%;
 }
 
@@ -41,7 +41,7 @@
     height: 42px;
     left: 40px;
     right: 40px;
-    background-image: url('progress-bar-track.png');
+    background-image: url('/progress-bar-track.png');
     background-repeat: repeat-x;
     background-size: 36px 100%;
 }
@@ -55,7 +55,7 @@
     bottom: 8px;
     left: 0;
     width: 100%;
-    background-image: url('progress.png');
+    background-image: url('/progress.png');
     background-repeat: repeat-x;
     background-size: 36px 100%;
 }
@@ -63,17 +63,17 @@
 /* progress bar - blue color */
 .blue
 {
-    background-image: url('progress-blue.png');
+    background-image: url('/progress-blue.png');
 }
 
 /* progress bar - green color */
 .green
 {
-    background-image: url('progress-green.png');
+    background-image: url('/progress-green.png');
 }
 
 /* progress bar - red color */
 .red
 {
-    background-image: url('progress-red.png');
+    background-image: url('/progress-red.png');
 }
