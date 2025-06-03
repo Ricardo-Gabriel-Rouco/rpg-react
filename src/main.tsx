@@ -6,6 +6,7 @@ import "./index.css"; // aquí debería estar incluido Tailwind
 
 import Button from "./Button/Button";
 import CheckBox from "./CheckBox/CheckBox";
+import Container from "./Container/Container";
 
 function App() {
   return (
@@ -28,15 +29,23 @@ function App() {
         <CheckBox type="radio" name="grupo1" label="Opción 1" />
         <CheckBox type="radio" name="grupo1" label="Opción 2" gold />
       </section>
-      {/*
 
       <section>
         <h2 className="text-xl font-semibold mb-2">Container</h2>
-        <Container>
-          <p>Contenido dentro del Container</p>
+        <Container type="framed">
+          <p>Esto es un contenedor con marco clásico.</p>
+        </Container>
+        <Container type="golden">
+          <p>Contenedor dorado para contenido especial.</p>
+        </Container>
+        <Container type="shinny">
+          <p>Contenedor brillante (versión 2).</p>
+        </Container>
+        <Container type="grey">
+          <p>Contenedor gris más sobrio.</p>
         </Container>
       </section>
-
+      {/*
       <section>
         <h2 className="text-xl font-semibold mb-2">Dropdown</h2>
         <Dropdown options={["Opción 1", "Opción 2", "Opción 3"]} />
