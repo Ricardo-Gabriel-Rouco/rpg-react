@@ -1,0 +1,106 @@
+.title1 {
+  /* color and border */
+  @apply text-white text-[1.14rem];
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  /* center text */
+  text-align: center;
+
+  /* padding */
+  padding: 0 0 0 0;
+  margin: 7px 7px 17px 7px;
+}
+
+/* default gui header2 */
+.title2 {
+  @apply text-white text-[1.25rem];
+  /* color and border */
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+
+  /* center text */
+  text-align: center;
+
+  /* padding */
+  padding: 0 0 0 0;
+  margin: 7px 7px 17px 7px;
+}
+
+/* default gui header3 */
+.title3 {
+  /* color and border */
+  @apply text-white text-[1.15rem];
+
+  font-weight: 1;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  text-decoration: underline;
+
+  /* center text */
+  text-align: center;
+
+  /* padding */
+  padding: 0 0 0 0;
+  margin: 7px 7px 17px 7px;
+}
+
+/* default gui header4 */
+.title4 {
+  /* color and border */
+  @apply text-white text-[1rem];
+  font-weight: 1;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  text-decoration: underline;
+
+  /* center text */
+  text-align: center;
+
+  /* padding */
+  padding: 0 0 0 0;
+  margin: 7px 7px 17px 7px;
+}
+
+/* default p */
+.text {
+  /* color and border */
+  @apply text-white text-[1rem];
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  line-height: 22px;
+}
+
+/* default span */
+.span {
+  /* color and border */
+  @apply text-white text-[1rem];
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  line-height: 22px;
+}
+
+/* default gui link */
+.link {
+  /* color and border */
+  @apply text-yellow-400 text-[1rem];
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  line-height: 22px;
+  text-decoration: none;
+}
+/* default gui link */
+.link:hover {
+  text-decoration: underline;
+  color: yellow;
+}
+
+/* default gui label */
+.label {
+  /* color and border */
+  @apply text-white text-[1rem];
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  line-height: 20px;
+  display: inline;
+}
+
+/* default gui label */
+.list {
+  /* color and border */
+  @apply text-white text-[1rem];
+  margin-left: 20px;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  line-height: 22px;
+}

@@ -1,0 +1,15 @@
+hr.regular {
+    display:block;
+    border:0px;
+    height:10px;
+    background: url("/hr.png") repeat-x top left;
+}
+
+/* rpgui golden hr */
+hr.golden {
+    display:block;
+    border:0px;
+    height:10px;
+    background: url("/hr-golden.png") no-repeat top left;
+    background-size: 100% 100%;
+}
