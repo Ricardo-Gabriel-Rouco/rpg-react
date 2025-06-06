@@ -18,12 +18,12 @@ const Container: FC<PropsWithChildren<ContainerProps>> = ({
 
   const variantStyles: Record<ContainerType, string> = {
     framed:
-      "border-[15px] border-[image:var(--border-framed)] bg-[image:var(--bg-framed)] border-[image-slice:6] border-[image-repeat:repeat]",
+      "border-[15px] border-[image:var(--border-framed)] bg-[image:var(--bg-framed)] border-[image-repeat:repeat]",
     golden:
       "border-[15px] border-[image:var(--border-golden)] bg-[image:var(--bg-golden)] border-[image-slice:4] border-[image-repeat:repeat]",
     shinny:
-      "border-[15px] border-[image:var(--border-shinny)] bg-[image:var(--bg-shinny)] border-[image-slice:8] border-[image-repeat:repeat]",
-    grey: "border-[7px] border-[image:var(--border-grey)] bg-[image:var(--bg-grey)] border-[image-slice:3] border-[image-repeat:repeat]",
+      "border-[15px] [border-image-source:url('/border-image-golden2.png')] bg-[image:var(--bg-shinny)] border-[image-slice:6] border-[image-repeat:repeat]",
+    grey: `border-[7px] border-image-[url('/border-image-grey.png')] bg-[image:var(--bg-grey)] border-[image-slice:3] border-[image-repeat:repeat]`,
   };
 
   return (
